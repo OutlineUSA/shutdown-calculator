@@ -1,6 +1,10 @@
 
 $(document).ready(function() {
 
+    if (!window.location.href.match(/\/$/)) {
+        window.location = '/';
+    }
+
     var template = _.template($('#banner-template').html());
 
     var startDate = 1380600000000; //Math.abs(new Date('2013-10-1 EDT'));
