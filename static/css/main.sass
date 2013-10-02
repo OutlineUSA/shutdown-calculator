@@ -60,12 +60,31 @@ u
   a
     color: inherit
 
+.logo-wrapper
+  a
+    display: block
+    text-decoration: none !important
+    color: inherit
+    margin-bottom: 40px
+    font-weight: bold
+.logo
+  display: block
+  width: 132px
+  height: 27px
+  margin: 0 auto
+  background: url('http://outline.com/static/img/logo.svg') no-repeat center 
+  @include textHide
+
 @media (min-width: 992px)
   .number-figure-huge
     font-size: 96px
     display: inline-block
     margin-top: 20px
     padding-bottom: 20px
+
+.no-svg
+  .logo
+    background-image: url('http://outline.com/static/img/logo.png')
 
 @import homepage
 
