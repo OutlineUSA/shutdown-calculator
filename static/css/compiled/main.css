@@ -51,11 +51,12 @@ u {
 .addthis_toolbox {
   max-width: 320px;
   margin: 20px auto; }
-  .addthis_toolbox > a {
+  .addthis_toolbox > a, .addthis_toolbox > .twitter-share-btn {
+    float: left;
     width: 50%; }
-    .addthis_toolbox > a > * {
+    .addthis_toolbox > a > *, .addthis_toolbox > .twitter-share-btn > * {
       margin: 10px; }
-    .addthis_toolbox > a:first-child > * {
+    .addthis_toolbox > a:first-child > *, .addthis_toolbox > .twitter-share-btn:first-child > * {
       float: right; }
 
 .last-paragraph {
