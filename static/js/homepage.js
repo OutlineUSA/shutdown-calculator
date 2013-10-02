@@ -1,6 +1,4 @@
-
-$(document).ready(function() {
-
+(function loadHomepageJS(){
     if (!window.location.href.match(/\/$/)) {
         window.location = '/';
     }
@@ -20,7 +18,7 @@ $(document).ready(function() {
         var tmp = _s.reverse(str);
         tmp = tmp.replace(/([0-9]{3})/g, '$1,');
         var val = _s.reverse(tmp);
-        if (val.substr(0, 1) === ',') {
+        if (val[0] === ',') {
             val = val.substring(1, val.length);
         }   
         return val;
@@ -56,6 +54,6 @@ $(document).ready(function() {
         $('#template-wrapper').html(template(vals));
     }
 
-    window.setInterval(updateValues, 1000)
-
-});
+    updateValues();
+    window.setInterval(updateValues, 1000);
+})();
