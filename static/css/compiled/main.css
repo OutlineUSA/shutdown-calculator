@@ -74,12 +74,20 @@ u {
   .greyed a {
     color: inherit; }
 
-.logo-wrapper a {
-  display: block;
-  text-decoration: none !important;
-  color: inherit;
-  margin-bottom: 40px;
-  font-weight: bold; }
+.logo-wrapper {
+  *zoom: 1; }
+  .logo-wrapper:before, .logo-wrapper:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .logo-wrapper:after {
+    clear: both; }
+  .logo-wrapper a {
+    display: inline-block;
+    text-decoration: none !important;
+    color: inherit;
+    margin-bottom: 40px;
+    font-weight: bold; }
 
 .logo {
   display: block;
