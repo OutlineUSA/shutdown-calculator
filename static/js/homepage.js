@@ -35,7 +35,6 @@ $(document).ready(function() {
     function updateValues() {
         var currentDate = Math.abs(new Date()),
             timeDiff = currentDate - startDate;
-        //console.log('=======>', currentDate, startDate, timeDiff);
         var days = Math.floor(timeDiff / DAYS),
             hours = Math.floor((timeDiff % DAYS) / HOURS),
             minutes = Math.floor((timeDiff % HOURS) / MINUTES),
@@ -56,6 +55,7 @@ $(document).ready(function() {
         $('#template-wrapper').html(template(vals));
     }
 
+    updateValues();
     window.setInterval(updateValues, 1000)
 
 });
